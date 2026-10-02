@@ -1,8 +1,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+img {
+    max-width: 100%;
+}
 body {
   font-family: Roboto, sans-serif;
+  margin: 0;
 }
 header,
 main,
@@ -45,4 +49,31 @@ nav a:hover {
 footer {
     text-align: center;
 }
-          
+       
+@media screen and (min-width: 600px) {
+    nav {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        display: block;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
