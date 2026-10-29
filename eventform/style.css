@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: #bcceda;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 16px;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 2.2rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 15px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-size: 1rem;
+}
+
+input,
+select {
+    height: 40px;
+    padding: 0 14px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #777;
+    border-radius: 4px;
+    background: #fff;
+}
+
+input.invalid,
+select.invalid {
+    border-color: #b00020;
+    background: #fff6f6;
+}
+
+button {
+    height: 40px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #bcceda;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #aebfcd;
+}
+
+.errors {
+    margin-top: 20px;
+    padding: 14px 18px;
+    background: #fdecea;
+    border: 1px solid #b00020;
+    border-radius: 8px;
+    color: #7a0016;
+}
+
+.errors p {
+    margin: 0 0 8px;
+    font-weight: bold;
+}
+
+.errors ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.ticket {
+    margin-top: 24px;
+    padding: 20px;
+    border: 2px dashed #000;
+    border-radius: 12px;
+    background: #eef3f7;
+}
+
+.ticket h2 {
+    margin: 0 0 12px;
+    font-size: 1.5rem;
+}
+
+.ticket dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 6px 16px;
+    margin: 0;
+}
+
+.ticket dt {
+    font-weight: bold;
+}
+
+.ticket dd {
+    margin: 0;
+    word-break: break-word;
+}
+
+@media (max-width: 500px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+}
