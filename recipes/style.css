@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    background: #fff;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 21rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.logo img {
+    width: 4.5rem;
+    height: auto;
+}
+
+.logo span {
+    font-family: "Amatic SC", "Arial Narrow", Impact, sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: none;
+}
+
+#title {
+    font-family: "Amatic SC", 'Times New Roman', Times, serif;
+}
+
+.search {
+    display: flex;
+    align-items: stretch;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.search input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search:focus-within {
+    outline: 3px solid #0a8ae0;
+    outline-offset: 2px;
+}
+
+.search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+    background: #fff;
+    border: none;
+    border-left: 1px solid #000;   /* the thin divider */
+    cursor: pointer;
+}
+
+        .search button img {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        hr {
+            width: 100%;
+            margin: 0;
+            border: none;
+            border-top: 1px solid #bbb;
+        }
+
+        /* ---------- Recipe card ---------- */
+        main {
+            flex: 1;                   /* pushes the footer to the bottom */
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;    /* stacked on mobile */
+            gap: 0.5rem;
+            padding: 0.75rem;
+            border: 2px solid #000;
+            border-radius: 0.5rem;
+        }
+
+        .card-image {
+            flex: 0 0 auto;
+        }
+
+        .card-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25rem;
+        }
+
+        .tag {
+            padding: 0.15rem 0.35rem;
+            font-size: 1rem;
+            font-family: inherit;
+            background: #efefef;
+            border: 1px solid #767676;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .card h2 {
+            margin: 1.25rem 0 0;
+            font-family: "Amatic SC", "Arial Narrow", Impact, sans-serif;
+            font-weight: 700;
+            font-size: 2.1rem;
+            line-height: 1;
+            color: #0a8ae0;
+        }
+
+        .rating {
+            font-size: 1rem;
+            line-height: 1;
+        }
+
+        .description {
+            display: none;             /* hidden on mobile, shown on larger screens */
+            margin: 0.5rem 0 0;
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            display: flex;
+            flex-direction: column;    /* icons above the credit link on mobile */
+            align-items: center;
+            gap: 1.25rem;
+            font-size: 0.7rem;
+        }
+
+        .social {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .social img {
+            display: block;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        /* ---------- Larger devices ---------- */
+        @media (min-width: 700px) {
+            .page {
+                max-width: 52rem;
+                padding: 2rem 1.5rem;
+            }
+
+            .logo img {
+                width: 7rem;
+            }
+
+            .logo span {
+                font-size: 5rem;
+            }
+
+            .search input {
+                padding: 0.75rem;
+                font-size: 1.15rem;
+            }
+
+            .search button img {
+                width: 2.75rem;
+                height: 2.75rem;
+            }
+
+            /* card turns into a row: image left, text right */
+            .card {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 1.25rem;
+                padding: 1.25rem;
+            }
+
+            .card-image {
+                flex: 0 0 44%;
+            }
+
+            .card-body {
+                flex: 1;
+                gap: 0.5rem;
+            }
+
+            .tag {
+                font-size: 1.1rem;
+            }
+
+            .card h2 {
+                margin-top: 1rem;
+                font-size: 2.75rem;
+            }
+
+            .description {
+                display: block;
+                margin-top: 0.75rem;
+                font-size: 0.85rem;
+            }
+
+            /* footer turns into a row: credit link left, icons right */
+            footer {
+                flex-direction: row-reverse;   /* social icons come first in the HTML */
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.8rem;
+            }
+
+            .social img {
+                width: 2.25rem;
+                height: 2.25rem;
+            }
+        }
