@@ -42,10 +42,6 @@ body {
     text-transform: none;
 }
 
-#title {
-    font-family: "Amatic SC", 'Times New Roman', Times, serif;
-}
-
 .search {
     display: flex;
     align-items: stretch;
@@ -83,168 +79,155 @@ body {
     cursor: pointer;
 }
 
-        .search button img {
-            width: 2rem;
-            height: 2rem;
-        }
+.search button img {
+    width: 2rem;
+    height: 2rem;
+}
 
-        hr {
-            width: 100%;
-            margin: 0;
-            border: none;
-            border-top: 1px solid #bbb;
-        }
+hr {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-top: 1px solid #bbb;
+}
 
-        /* ---------- Recipe card ---------- */
-        main {
-            flex: 1;                   /* pushes the footer to the bottom */
-        }
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+}
 
-        .card {
-            display: flex;
-            flex-direction: column;    /* stacked on mobile */
-            gap: 0.5rem;
-            padding: 0.75rem;
-            border: 2px solid #000;
-            border-radius: 0.5rem;
-        }
+.card-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
-        .card-image {
-            flex: 0 0 auto;
-        }
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
 
-        .card-image img {
-            display: block;
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
+.tag {
+    padding: 0.15rem 0.35rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #efefef;
+    border: 1px solid #767676;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
-        .card-body {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.25rem;
-        }
+.card h2 {
+    margin: 1.25rem 0 0;
+    font-family: "Amatic SC", "Arial Narrow", Impact, sans-serif;
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 1;
+    color: #0a8ae0;
+}
 
-        .tag {
-            padding: 0.15rem 0.35rem;
-            font-size: 1rem;
-            font-family: inherit;
-            background: #efefef;
-            border: 1px solid #767676;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+.rating {
+    font-size: 1rem;
+    line-height: 1;
+}
 
-        .card h2 {
-            margin: 1.25rem 0 0;
-            font-family: "Amatic SC", "Arial Narrow", Impact, sans-serif;
-            font-weight: 700;
-            font-size: 2.1rem;
-            line-height: 1;
-            color: #0a8ae0;
-        }
+.description {
+    display: none;
+    margin: 0.5rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
 
-        .rating {
-            font-size: 1rem;
-            line-height: 1;
-        }
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 0.7rem;
+}
 
-        .description {
-            display: none;             /* hidden on mobile, shown on larger screens */
-            margin: 0.5rem 0 0;
-            font-size: 0.8rem;
-            line-height: 1.4;
-        }
+.social {
+    display: flex;
+    gap: 0.25rem;
+}
 
-        /* ---------- Footer ---------- */
-        footer {
-            display: flex;
-            flex-direction: column;    /* icons above the credit link on mobile */
-            align-items: center;
-            gap: 1.25rem;
-            font-size: 0.7rem;
-        }
+.social img {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+}
 
-        .social {
-            display: flex;
-            gap: 0.25rem;
-        }
+@media (min-width: 700px) {
+    .page {
+        max-width: 52rem;
+        padding: 2rem 1.5rem;
+    }
 
-        .social img {
-            display: block;
-            width: 2rem;
-            height: 2rem;
-        }
+    .logo img {
+        width: 7rem;
+    }
 
-        /* ---------- Larger devices ---------- */
-        @media (min-width: 700px) {
-            .page {
-                max-width: 52rem;
-                padding: 2rem 1.5rem;
-            }
+    .logo span {
+        font-size: 5rem;
+    }
 
-            .logo img {
-                width: 7rem;
-            }
+    .search input {
+        padding: 0.75rem;
+        font-size: 1.15rem;
+    }
 
-            .logo span {
-                font-size: 5rem;
-            }
+    .search button img {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
 
-            .search input {
-                padding: 0.75rem;
-                font-size: 1.15rem;
-            }
+    .card {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
 
-            .search button img {
-                width: 2.75rem;
-                height: 2.75rem;
-            }
+    .card-image {
+        flex: 0 0 44%;
+    }
 
-            /* card turns into a row: image left, text right */
-            .card {
-                flex-direction: row;
-                align-items: flex-start;
-                gap: 1.25rem;
-                padding: 1.25rem;
-            }
+    .card-body {
+        flex: 1;
+        gap: 0.5rem;
+    }
 
-            .card-image {
-                flex: 0 0 44%;
-            }
+    .tag {
+        font-size: 1.1rem;
+    }
 
-            .card-body {
-                flex: 1;
-                gap: 0.5rem;
-            }
+    .card h2 {
+        margin-top: 1rem;
+        font-size: 2.75rem;
+    }
 
-            .tag {
-                font-size: 1.1rem;
-            }
+    .description {
+        display: block;
+        margin-top: 0.75rem;
+        font-size: 0.85rem;
+    }
 
-            .card h2 {
-                margin-top: 1rem;
-                font-size: 2.75rem;
-            }
+    footer {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+    }
 
-            .description {
-                display: block;
-                margin-top: 0.75rem;
-                font-size: 0.85rem;
-            }
-
-            /* footer turns into a row: credit link left, icons right */
-            footer {
-                flex-direction: row-reverse;   /* social icons come first in the HTML */
-                justify-content: space-between;
-                align-items: center;
-                font-size: 0.8rem;
-            }
-
-            .social img {
-                width: 2.25rem;
-                height: 2.25rem;
-            }
-        }
+    .social img {
+        width: 2.25rem;
+        height: 2.25rem;
+    }    
+}
